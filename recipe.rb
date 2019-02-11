@@ -1,4 +1,5 @@
 class Recipe
+  attr_reader :name, :description, :time_prep
 
   def initialize(attributes = {})
     @name = attributes[:name]
