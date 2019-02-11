@@ -1,5 +1,6 @@
 require_relative 'view'
 require_relative 'recipe'
+require_relative 'scrape_marmiton'
 
 class Controller
   def initialize(cookbook)
@@ -46,6 +47,21 @@ class Controller
     # 3. mark as done and save in repo
     @cookbook.mark_recipe_as_done(index)
     # 4. display recipes
+    display_recipes
+  end
+
+  def import
+    # 1. Ask user for a keyword
+    term = @view.ask_user_for("ingredient")
+    # 2. Scrape LetsCookFrench
+    results = ScrapeMarmiton.new(term).call
+    # 3. Display results
+    @view.display(results)
+    # 4. Ask for the recipe to import
+    index = @view.ask_user_for_index
+    # 5. Add to cookbook
+    @cookbook.add(results[index])
+    # 6. Display
     display_recipes
   end
 

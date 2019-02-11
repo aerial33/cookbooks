@@ -1,2 +1,4 @@
 name,description,time_prep,done
 tarte au chocolat,Découvrez la recette de la Tarte au chocolat de grand-mère. Cette tarte est ultra simple à faire et possède un goût incomparable...,40,true
+Fondant au chocolat,"Ingrédients : chocolat à cuire,beurre doux,sucre semoule,oeuf,farine.Préchauffer le four à 180°C (thermostat 6)....",35 min,false
+Tarte aux pommes à l'Alsacienne,"Ingrédients : pomme (selon la grosseur),pâte brisée,oeuf,crème fraîche,sucre en poudre,sucre vanillé.Pelez et coupez les pommes en fines tranchesDans un saladier, mélangez le sucre, les oeufs, le sucre...",55 min,true

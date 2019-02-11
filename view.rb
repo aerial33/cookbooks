@@ -10,7 +10,7 @@ class View
   end
 
   def ask_user_for(answer)
-    puts "#{answer.capitalize}?"
+    puts "#{answer.capitalize} ?"
     print "👉 > "
     return gets.chomp
   end
