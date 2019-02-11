@@ -1,18 +1,20 @@
 class Router
   def initialize(controller)
     @controller = controller
-    @running = true
+    @running    = true
   end
 
   def run
-    puts "Welcome to your Cookbook!"
-    puts "         ---             "
+    puts "           ----             "
+    puts "  Welcome to your Cookbook! 🎉 "
+    puts "           ----             "
 
     while @running
       display_tasks
       action = gets.chomp.to_i
-      print 'clear'
+      print `clear`
       route_action(action)
+    end
   end
 
   private
@@ -25,7 +27,7 @@ class Router
     when 4 then @controller.mark_as_done
     when 5 then stop
     else
-      puts "Please press 1,2,3,4 or 5"
+      puts "Please press 1, 2, 3, 4 or 5"
     end
   end
 
@@ -41,6 +43,6 @@ class Router
     puts "3 - Destroy a recipe"
     puts "4 - Mark recipe as done"
     puts "5 - Stop and exit the program"
-    print "> "
+    print "> 👉 "
   end
 end
